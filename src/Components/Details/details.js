@@ -20,7 +20,7 @@ const Details = ({search})=>{
     },[])
     console.log(single)
     let show = single.map((show)=>{
-        let x = `${show.show.summary.split('<p>').join('').split('</p>').join('').split('<b>').join('').split('</b>').join('')}`
+        let x = `${show.show.summary.split('<p>').join('').split('</p>').join('').split('<b>').join('').split('</b>').join('').split('<i>').join('').split('</i>').join('')}`
         return(
             <div className="textCenter" key='only'>
                 <div className="img mid">
