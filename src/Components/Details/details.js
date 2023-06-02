@@ -3,13 +3,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./details.css"
 
-const Details = ()=>{
+const Details = ({search})=>{
     let {id} = useParams();
     id = Number(id)
+    console.log(search)
     let navigate = useNavigate()
     let [single, setSingle] = useState([])
     let fetchData = async()=>{
-        let response = await axios.get("https://api.tvmaze.com/search/shows?q=mystar")
+        let response = await axios.get(`https://api.tvmaze.com/search/shows?q=${search}`)
         setSingle(response.data.filter((show)=>{
             return show.show.id === id
         }))
