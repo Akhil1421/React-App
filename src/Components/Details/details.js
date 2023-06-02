@@ -60,6 +60,7 @@ const Details = ()=>{
         }
         localStorage.setItem("info", JSON.stringify(info))
         setShowForm(false)
+        alert("Your Show has been booked")
     }
     let goBack = ()=>{
         navigate("/")
