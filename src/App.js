@@ -10,7 +10,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home dataArray={dataArray} setDataArray={setDataArray}/>} />
-      <Route path="/details/:id" element={<Details dataArray={dataArray} setDataArray={setDataArray}/>} />
+      <Route path="/details/:id" element={<Details/>} />
     </Routes>
   );
 }
