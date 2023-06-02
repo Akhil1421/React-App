@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css"
 import { useNavigate } from "react-router-dom";
-import { useState,useEffect } from 'react';
+import { useEffect } from 'react';
 import axios from "axios";
 
 const Home = ({dataArray,setDataArray})=>{
@@ -22,7 +22,7 @@ const Home = ({dataArray,setDataArray})=>{
         return(
             <div className="ind-show" key={showDetails.show.id} id={ind} onClick={()=>handleClick(ind)}>
                 {showDetails.show.image  && <img src={showDetails.show.image.medium} alt="showImage"/>}
-                {!showDetails.show.image && <img src='NotAvailable.jpg' alt="Image Not Available" />}
+                {!showDetails.show.image && <img src='NotAvailable.jpg' alt="Not Available" />}
                 <div className="mid">
                     <h4>{showDetails.show.name}</h4>
                 </div>
